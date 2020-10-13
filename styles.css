@@ -22,16 +22,12 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: rgb(49, 97, 201);
 }
-.blinkyDancer{
+.blinkyDancer, .witchyDancer, .feistyDancer{
   /* border:10px solid red; */
   /* border-radius:10px; */
   position: absolute;
-  /* content: url("cat.png"); */
-  /* height: 150px;
-  width: 150px; */
-  /* background-image: url("https://cdn1.iconfinder.com/data/icons/halloween-2-3/48/51-512.png");
-  background-size: cover; */
 }
+
 
 .ghost{
   height: 100px;
@@ -39,11 +35,11 @@ body, a:link, a:visited, a:active{
 }
 
 .witch{
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
 }
 
 .cat{
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
 }

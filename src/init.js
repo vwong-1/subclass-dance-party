@@ -1,5 +1,10 @@
 $(document).ready(function() {
   window.dancers = [];
+  $('.lineUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+  });
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -18,6 +23,7 @@ $(document).ready(function() {
 
     var dancerMakers = ['makeBlinkyDancer', 'makeFeistyDancer', 'makeWitchyDancer'];
     var index = Math.floor(Math.random() * dancerMakers.length);
+
     var dancerMakerFunctionName = dancerMakers[index];
 
     // get the maker function for the kind of dancer we're supposed to make
@@ -30,6 +36,7 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000 + 500
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 });

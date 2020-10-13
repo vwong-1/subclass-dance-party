@@ -16,7 +16,7 @@ makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 // };
 
 makeBlinkyDancer.prototype.helper = function() {
-  this.$node.toggle();
+  this.$node.fadeToggle("slow");
 };
 
 // var makeBlinkyDancer = function(top, left, timeBetweenSteps) {

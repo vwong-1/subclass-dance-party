@@ -8,7 +8,11 @@ var makeFeistyDancer = function(top, left, timeBetweenSteps) {
 makeFeistyDancer.prototype = Object.create(makeDancer.prototype);
 makeFeistyDancer.prototype.constructor = makeFeistyDancer;
 
-makeFeistyDancer.prototype.step = function() {
-  makeDancer.prototype.step.call(this);
+makeFeistyDancer.prototype.helper = function() {
   this.$node.toggle();
 };
+
+// makeFeistyDancer.prototype.step = function() {
+//   makeDancer.prototype.step.call(this);
+//   this.$node.toggle();
+// };
