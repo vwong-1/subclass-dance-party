@@ -16,7 +16,9 @@ $(document).ready(function() {
      * to the stage.
      */
 
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    var dancerMakers = ['makeBlinkyDancer', 'makeFeistyDancer', 'makeWitchyDancer'];
+    var index = Math.floor(Math.random() * dancerMakers.length);
+    var dancerMakerFunctionName = dancerMakers[index];
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
@@ -26,7 +28,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 1000 + 500
     );
     $('body').append(dancer.$node);
   });

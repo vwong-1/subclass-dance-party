@@ -1,6 +1,8 @@
 var makeWitchyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('witchyDancer');
+  this.$image = $('<img class="witch" src="https://www.kindpng.com/imgv/JJTbox_witch-to-use-png-image-clipart-cute-witch/">');
+  this.$node.append(this.$image);
 };
 
 makeFeistyDancer.prototype = Object.create(makeDancer.prototype);

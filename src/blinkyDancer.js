@@ -3,6 +3,8 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('blinkyDancer');
+  this.$image = $('<img class="ghost" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FxYxMqOwafEbL2%2Fgiphy.gif&f=1&nofb=1">');
+  this.$node.append(this.$image);
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
