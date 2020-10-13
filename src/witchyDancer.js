@@ -4,7 +4,7 @@ var makeWitchyDancer = function(top, left, timeBetweenSteps) {
   this.$image = $('<img class="witch" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FWZmgVLMt7mp44%2Fgiphy.gif&f=1&nofb=1">');
   this.$node.append(this.$image);
   this.position = left;
-  this.width = $(window).width();
+  this.width = $(window).width() - 100;
 };
 
 makeWitchyDancer.prototype = Object.create(makeDancer.prototype);
@@ -21,4 +21,3 @@ makeWitchyDancer.prototype.helper = function() {
 //   makeDancer.prototype.step.call(this);
 //   this.$node.toggle();
 // };
-
