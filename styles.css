@@ -42,4 +42,5 @@ body, a:link, a:visited, a:active{
 .cat{
   height: 100px;
   width: 100px;
+  transform: rotate(45deg);
 }
